@@ -1,0 +1,53 @@
+.section {
+    padding: 80px 0;
+    background-color: var(--primary);
+    color: white;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.item {
+    text-align: center;
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.icon {
+    color: var(--secondary);
+}
+
+.title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.desc {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.6;
+}

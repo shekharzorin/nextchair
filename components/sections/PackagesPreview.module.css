@@ -1,0 +1,96 @@
+.section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.heading h2 {
+    font-size: 36px;
+    margin-bottom: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.card {
+    padding: 40px 32px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: white;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    border-color: var(--secondary);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 6px 30px;
+    font-size: 12px;
+    font-weight: 700;
+    transform: rotate(45deg);
+}
+
+.pkgName {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.pkgFor {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+    background: var(--surface);
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.price {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 24px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 32px;
+    text-align: left;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.check {
+    color: var(--secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.viewAll {
+    text-align: center;
+}

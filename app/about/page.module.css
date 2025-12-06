@@ -1,0 +1,47 @@
+.header {
+    padding: 100px 0;
+    background: var(--primary);
+    color: white;
+    text-align: center;
+}
+
+.story {
+    padding: 80px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.story h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+.story p {
+    margin-bottom: 24px;
+    font-size: 16px;
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+.values {
+    background: var(--surface);
+    padding: 80px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.valueCard {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.valueCard h3 {
+    margin-bottom: 12px;
+    color: var(--primary);
+}

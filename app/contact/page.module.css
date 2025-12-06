@@ -1,0 +1,91 @@
+.section {
+    padding: 80px 0;
+    display: flex;
+    gap: 60px;
+}
+
+.formContainer {
+    flex: 2;
+    background: white;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+}
+
+.infoContainer {
+    flex: 1;
+}
+
+.heading {
+    font-size: 32px;
+    margin-bottom: 32px;
+    color: var(--primary);
+}
+
+.formGroup {
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.input,
+.select,
+.textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+}
+
+.textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.infoBox {
+    background: var(--surface);
+    padding: 32px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+}
+
+.infoItem {
+    margin-bottom: 20px;
+}
+
+.infoLabel {
+    display: block;
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.infoValue {
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .section {
+        flex-direction: column-reverse;
+    }
+}

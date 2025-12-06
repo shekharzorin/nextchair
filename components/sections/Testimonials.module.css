@@ -1,0 +1,42 @@
+.section {
+    padding: 80px 0;
+    background: var(--surface);
+}
+
+.title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 32px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.text {
+    font-size: 16px;
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 24px;
+}
+
+.author h4 {
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.author span {
+    font-size: 14px;
+    color: var(--text-light);
+}
