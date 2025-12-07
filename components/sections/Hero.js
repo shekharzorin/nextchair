@@ -5,16 +5,25 @@ import styles from './Hero.module.css';
 const Hero = () => {
     return (
         <section className={styles.hero}>
+            <Image
+                src="/images/hero.png"
+                alt="Political Campaign Crowd"
+                fill
+                className={styles.bgImage}
+                priority
+            />
+            <div className={styles.overlay}></div>
+
             <div className={`container ${styles.container}`}>
                 <div className={styles.content}>
                     <span className={styles.badge}>NextChair Political Tech</span>
-                    <h1 className={styles.title}>
-                        Win Your Next Chair with Smarter Campaign Support
+                    <h1 className={styles.heading}>
+                        Win Your Next Chair with <span className={styles.highlight}>Smarter</span> Campaign Support
                     </h1>
-                    <p className={styles.subtitle}>
+                    <p className={styles.subheading}>
                         NextChair helps political leaders run powerful digital and ground campaigns – from social media to vehicles, events, and voter connection. Be the leader your people need.
                     </p>
-                    <div className={styles.buttonGroup}>
+                    <div className={styles.ctaGroup}>
                         <Button href="/contact" variant="primary" size="lg">
                             Talk to Our Team
                         </Button>
@@ -22,16 +31,6 @@ const Hero = () => {
                             View Packages
                         </Button>
                     </div>
-                </div>
-                <div className={styles.imageContainer}>
-                    <Image
-                        src="/images/hero.png"
-                        alt="Political Campaign Success"
-                        width={600}
-                        height={400}
-                        className={styles.image}
-                        priority
-                    />
                 </div>
             </div>
         </section>

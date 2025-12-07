@@ -1,76 +1,105 @@
 .header {
-    height: var(--header-height);
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid var(--border);
+    background: rgba(10, 25, 47, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
 }
 
 .navContainer {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
-    height: 100%;
+    width: 100%;
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--primary);
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .logoIcon {
-    color: var(--secondary);
+    color: var(--primary);
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.3));
 }
 
 .navLinks {
     display: flex;
-    gap: 32px;
-    align-items: center;
+    gap: 24px;
 }
 
 .link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
     font-weight: 500;
-    color: var(--text-main);
-    font-size: 15px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
 }
 
 .link:hover {
     color: var(--primary);
 }
 
+.link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
 .actions {
     display: flex;
     align-items: center;
     gap: 16px;
+    justify-self: end;
 }
 
-/* Mobile Menu Button - Hidden on Desktop */
+.ctaButton {
+    box-shadow: none;
+    /* Subtler for header */
+}
+
 .menuButton {
     display: none;
     background: none;
     border: none;
-    color: var(--primary);
+    color: var(--text-main);
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .navLinks {
         display: none;
     }
 
-    .actions .ctaButton {
-        display: none;
-        /* Hide CTA button on mobile header, maybe show in menu later */
-    }
-
     .menuButton {
         display: block;
+    }
+
+    .ctaButton {
+        display: none;
     }
 }

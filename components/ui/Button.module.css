@@ -2,46 +2,73 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 12px 32px;
+    font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    border-radius: var(--radius-md);
-    transition: all 0.2s ease;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: var(--radius-sm);
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-decoration: none;
-    font-family: var(--font-body);
+    border: none;
+    position: relative;
+    overflow: hidden;
 }
 
-.primary {
-    background-color: var(--primary);
-    color: #ffffff;
-}
-
-.primary:hover {
-    background-color: var(--primary-light);
-    transform: translateY(-1px);
-}
-
-.secondary {
-    background-color: var(--secondary);
-    color: var(--text-main);
-}
-
-.secondary:hover {
-    background-color: var(--secondary-light);
-    transform: translateY(-1px);
-}
-
-.outline {
-    background-color: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
-}
-
-.outline:hover {
-    background-color: rgba(10, 25, 47, 0.05);
+.button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    filter: grayscale(1);
 }
 
 .fullWidth {
     width: 100%;
+}
+
+/* Variants */
+.primary {
+    background: var(--gold-gradient);
+    background-size: 200% auto;
+    color: var(--secondary);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.primary:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+}
+
+.secondary {
+    background: var(--surface);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.secondary:hover {
+    background: rgba(212, 175, 55, 0.05);
+    transform: translateY(-2px);
+}
+
+.outline {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--text-light);
+}
+
+.outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.sm {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.lg {
+    padding: 16px 40px;
+    font-size: 18px;
 }

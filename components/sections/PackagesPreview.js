@@ -29,22 +29,22 @@ const PackagesPreview = () => {
     return (
         <section className={styles.section}>
             <div className="container">
-                <div className={styles.heading}>
-                    <h2>Choose Your Winning Package</h2>
-                    <p>Flexible plans designed for campaigns of all sizes.</p>
+                <div className={styles.header}>
+                    <h2 className={styles.title}>Choose Your Winning Package</h2>
+                    <p className={styles.description}>Flexible plans designed for campaigns of all sizes.</p>
                 </div>
 
                 <div className={styles.grid}>
                     {packages.map((pkg, index) => (
-                        <div key={index} className={styles.card}>
+                        <div key={index} className={`${styles.card} ${pkg.popular ? styles.popular : ''}`}>
                             {pkg.popular && <span className={styles.popularBadge}>POPULAR</span>}
-                            <h3 className={styles.pkgName}>{pkg.name}</h3>
-                            <span className={styles.pkgFor}>{pkg.for}</span>
+                            <h3 className={styles.planName}>{pkg.name}</h3>
+                            <span className={styles.duration}>{pkg.for}</span>
                             <p className={styles.price}>{pkg.price}</p>
 
                             <ul className={styles.features}>
                                 {pkg.features.map((feature, i) => (
-                                    <li key={i} className={styles.feature}>
+                                    <li key={i}>
                                         <Check size={16} className={styles.check} />
                                         <span>{feature}</span>
                                     </li>
@@ -58,8 +58,8 @@ const PackagesPreview = () => {
                     ))}
                 </div>
 
-                <div className={styles.viewAll}>
-                    <Link href="/packages" style={{ textDecoration: 'underline', color: 'var(--primary)' }}>View all features & pricing</Link>
+                <div style={{ textAlign: 'center', marginTop: 40 }}>
+                    <Link href="/packages" style={{ color: 'var(--primary)', textDecoration: 'underline' }}>View all features & pricing</Link>
                 </div>
             </div>
         </section>
